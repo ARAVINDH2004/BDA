@@ -1,0 +1,48 @@
+import pandas as pd
+
+data=pd.read_csv('weather.csv')
+data
+
+data.head()
+
+data.shape
+
+data.index
+
+ data.columns
+
+data.dtypes
+
+data['Wind Speed_km/h'].unique()
+
+data['Wind Speed_km/h'].nunique()
+
+data.nunique()
+
+data['Wind Speed_km/h'].count()
+
+data.count()
+
+data['Wind Speed_km/h'].value_counts()
+
+data.info()
+
+data['Wind Speed_km/h'].unique()
+
+data.groupby('Weather')
+
+data.head()
+
+data[data['Wind Speed_km/h'] == 4]
+
+data.isnull().sum()
+
+data.rename(columns={'Weather' : 'Weather Condition'},inplace=True)
+data
+
+data[data['Weather Condition'].str.contains('Snow')]
+
+data[(data['Wind Speed_km/h']>24) & (data.Visibility_km == 25)]
+
+data.Visibility_km.mean()
+
