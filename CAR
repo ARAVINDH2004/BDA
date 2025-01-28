@@ -1,0 +1,24 @@
+import pandas as pd
+
+data=pd.read_csv('Car.csv')
+data
+
+data.isnull().sum()
+
+data['Cylinders'].fillna(data['Cylinders'].mean(),inplace=True)
+
+data['Make'].unique()
+
+data['Make'].value_counts()
+
+data.head()
+
+data[data['Origin'].isin(['Asia' , 'Europe'])]
+
+data[~(data['Weight'] > 4000)]
+
+data['MPG_City']=data['MPG_City'].apply(lambda y:y+3)
+data.head()
+
+data.head()
+
